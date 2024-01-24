@@ -7,16 +7,17 @@ PreferredSizeWidget? customAppBar(String title, Color backgroundColor) {
       title,
       style: const TextStyle(color: Colors.black),
     ),
+    centerTitle: true,
   );
 }
 
-Widget answerCard(String text) {
+Widget answerCard(String text, BuildContext context) {
   return Container(
-    height: 60,
+    height: MediaQuery.of(context).size.width,
     width: 150,
     child: Card(
         child: Padding(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       child: Text(text),
     )),
   );
