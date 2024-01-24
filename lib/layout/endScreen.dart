@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/layout/quiz_page.dart';
 import 'package:quiz_app/layout/widget.dart';
+import 'package:quiz_app/main.dart';
 
-void main() {
-  runApp(const StartApp());
-}
+class EndScreen extends StatelessWidget {
+  final int userPoints;
 
-class StartApp extends StatelessWidget {
-  const StartApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: StartPage());
-  }
-}
-
-class StartPage extends StatelessWidget {
-  const StartPage({super.key});
+  const EndScreen({Key? key, required this.userPoints}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar("Home Page", Colors.cyan[200]!),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -34,16 +22,23 @@ class StartPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Spacer(),
-                Text("Willkommen in der Quiz App", style: headerTextStyle()),
+                Text("Quiz beendet", style: headerTextStyle()),
                 const Spacer(),
+                Text(
+                  "Du hast $userPoints von 10 Fragen richtig beantwortet.",
+                  textAlign: TextAlign.center,
+                  style: headerTextStyle(),
+                ),
+                Spacer(),
                 ElevatedButton(
                     onPressed: () {
+                      print("Gedrückt");
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const QuizPage()));
+                              builder: (context) => const StartPage()));
                     },
-                    child: const Text("Quiz starten")),
+                    child: const Text("To Home Page")),
                 Spacer(),
               ],
             ),
