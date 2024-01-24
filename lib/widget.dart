@@ -13,8 +13,8 @@ PreferredSizeWidget? customAppBar(String title, Color backgroundColor) {
 
 Widget answerCard(String text, BuildContext context) {
   return Container(
-    height: MediaQuery.of(context).size.width,
-    width: 150,
+    height: 60,
+    width: MediaQuery.of(context).size.width / 3,
     child: Card(
         child: Padding(
       padding: const EdgeInsets.all(10.0),
