@@ -12,7 +12,7 @@ PreferredSizeWidget? customAppBar(String title, Color backgroundColor) {
 }
 
 Widget answerCard(String text, BuildContext context, {bool? answer}) {
-  return Container(
+  return SizedBox(
     height: MediaQuery.of(context).size.height * 0.1,
     width: MediaQuery.of(context).size.width / 3,
     child: Card(

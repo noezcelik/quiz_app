@@ -6,7 +6,7 @@ List<String> getRandomQuestionList(
 }
 
 List<int> getRandomQuestionIndex(int lenth) {
-  var list = new List<int>.generate(lenth, (index) => index);
+  var list = List<int>.generate(lenth, (index) => index);
   list.shuffle();
   return list;
 }

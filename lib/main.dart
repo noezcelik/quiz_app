@@ -11,7 +11,7 @@ class StartApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: StartPage());
+    return const MaterialApp(home: StartPage());
   }
 }
 
@@ -44,7 +44,7 @@ class StartPage extends StatelessWidget {
                               builder: (context) => const QuizPage()));
                     },
                     child: const Text("Quiz starten")),
-                Spacer(),
+                const Spacer(),
               ],
             ),
           ),

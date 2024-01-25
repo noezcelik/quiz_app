@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:quiz_app/layout/widget.dart';
 import 'package:quiz_app/main.dart';
@@ -29,10 +30,9 @@ class EndScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: headerTextStyle(),
                 ),
-                Spacer(),
+                const Spacer(),
                 ElevatedButton(
                     onPressed: () {
-                      print("Gedrückt");
                       Navigator.push(
                           context,
                           MaterialPageRoute(

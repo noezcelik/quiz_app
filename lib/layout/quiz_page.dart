@@ -99,7 +99,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 ),
                 const Spacer(),
-                Text("Punkte:" + userPoint.toString()),
+                Text("Punkte:$userPoint"),
                 const Spacer(),
                 GestureDetector(
                   child: answerCard(answers[0], context,
